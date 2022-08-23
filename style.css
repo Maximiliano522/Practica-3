@@ -35,6 +35,8 @@
         }
         .social {
             background: #567890;
+            flex: 1 1 auto;
+            height: 30px;
         }
 
     .texto-principal {
@@ -63,4 +65,9 @@
             .publicidad {
                 background: #567890;
             }
-        .
+        .footer {
+            background: #000;
+        }
+            .pie {
+                background: #345678;
+            }
