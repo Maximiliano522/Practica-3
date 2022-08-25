@@ -1,7 +1,11 @@
 *{
-    padding: 10px;
-    margin: 10px;
+    padding: 0px;
+    margin: 0px;
     box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
 }
 
 .padre {
@@ -11,33 +15,60 @@
 }
 
 .header {
-    background-color: black;
+    background: url('./IMG/bg-2.jpg');
+    background-position: center;
+    background-attachment: contain;
+    background-size: cover;
     display: flex;
     flex-flow: column nowrap;
 
 }
     .menu {
-        background-color: #123456;
+        background-color: rgba(0, 0, 0, .1);
         display: flex;
         flex-flow: row nowrap;
         height:  100px;
         align-items: center;
+        border-bottom: 1px solid rgba(255, 255, 255, .5);
     }
         .logo {
-            background: #789012;
             flex: 1 1 auto;
-            height: 30px;
         }
+            .logo a {
+                color: #fff;
+                font-size: 30px;
+            }
+            .logo a:hover {
+                color:#000;
+            }
         .nav{
-            background: #345678;
+            
             flex: 5 1 auto;
-            height: 30px;
         }
+            .nav a {
+                color: #fff;
+                font-size: 11px;
+                text-transform: uppercase;
+                padding: 0 10px;
+                letter-spacing: 2px;
+            }
+            .nav a:hover{
+                color: #343434;
+            }
         .social {
-            background: #567890;
+            display: flex;
             flex: 1 1 auto;
-            height: 30px;
+
         }
+            .social a{
+                font-size: 18px;
+                color: #fff;
+                padding: 0 5px;
+            }
+
+            .social a:hover{
+
+            }
 
     .texto-principal {
         background: #562321;
@@ -46,20 +77,26 @@
             background: #567890;
         }
     .section {
-        background: #567890;
+        background: black;
     }
         .articulos {
-            background: #123456;
+            background: orange;
+            flex:  3 1 auto;
+            display: flex;
+            flex-flow: row wrap;
         }
             .article {
                 background: #789012;
+                flex: 1 1 40%;
             
             }
             .navegacion {
-                background: #562321;
+                background: blue;
+                flex: 1 1 100%;
             }
         .aside {
-            background: #562321;
+            background: azure;
+            flex: 1 1 auto;
 
         }
             .publicidad {
@@ -67,7 +104,37 @@
             }
         .footer {
             background: #000;
+            display: flex;
+            justify-content: center;
+
         }
             .pie {
                 background: #345678;
+                width: 300px;
             }
+        @media all and (max-width: 800px){
+            .section {
+                flex-direction: column;
+            }
+            .menu {
+                flex-direction: column;
+                height: auto;
+            }
+            .aside {
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        @media all and (max-width: 600px){
+            .articulos {
+                flex-direction: column;
+            }
+        }
+
+        @media all and (max-width: 400px) {
+            .aside {
+                flex-direction: column;
+            }
+        }
+    
