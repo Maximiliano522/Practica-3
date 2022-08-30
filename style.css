@@ -8,6 +8,10 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
 .padre {
     display: flex;
     flex-flow:column nowrap;
@@ -33,6 +37,7 @@ body {
     }
         .logo {
             flex: 1 1 auto;
+            text-align: center;
         }
             .logo a {
                 color: #fff;
@@ -41,14 +46,17 @@ body {
             .logo a:hover {
                 color:#343434;
             }
-        .nav{
-            
+        .nav {
             flex: 5 1 auto;
-            height: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
         }
             .nav a {
                 color: #fff;
-                font-size: 11px;
+                font-size: 18px;
                 text-transform: uppercase;
                 padding: 0 10px;
                 letter-spacing: 2px;
@@ -72,47 +80,96 @@ body {
             }
 
     .texto-principal {
-        background: #562321;
+        height: 90vh;
+        display: flex;
+        align-items: center;
     }
         h1 {
-            background: #567890;
+            font-family: 'Lora', serif;
+            font-size: 21px;
+            color:#fff;
+            font-weight: 300;
+            text-align: center;
+            line-height: 1.6;
         }
     .section {
-        background: black;
+        background: #fff;
+        display: flex;
     }
         .articulos {
-            background: #345678;
-            flex:  2 1 auto;
+            flex: 2 1 auto;
             display: flex;
             flex-flow: row wrap;
         }
-            .article {
-                background: #789012;
+            .articule {
+                background: #f7f7f7;
                 flex: 1 1 40%;
-            
             }
+
+            .articule a {
+                font-size: 15px;
+                letter-spacing: 10px;
+                
+            }
+
+                .articule h3 {
+                    color: #fff;
+                    font-size: 16px;
+                    padding: 10px 0;
+                    margin-top: -80px;
+                    letter-spacing: 1px;
+                }
+
+                .articule h2 {
+                    color: #fff;
+                    text-transform: uppercase;
+                    padding: 0 0 10px 0;
+
+                }
+
             .navegacion {
-                background: blue;
                 flex: 1 1 100%;
+                height: 50px;
+                background: #000;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
             }
+
+                .navegacion a {
+                    color: #fff;
+                    font-size: 12px;
+                    font-weight: 800;
+                    font-family: 'Lora', serif;
+                }
+
         .aside {
-            background: azure;
             flex: 1 1 auto;
+            background: #fff;
 
         }
             .publicidad {
-                background: #567890;
+                
             }
+                .publicidad img {
+                    width: 200px;
+                }
+
         .footer {
-            background: #000;
             display: flex;
             justify-content: center;
-
+            background: black;
         }
+
             .pie {
-                background: #345678;
-                width: 300px;
+                width: fit-content;
             }
+
+                .pie a {
+                    color:white;
+                    font-size: 30px;
+                }
 
         @media all and (max-width: 800px){
             .section {
